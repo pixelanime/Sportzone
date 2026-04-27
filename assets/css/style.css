@@ -74,3 +74,27 @@ footer a:hover {
 @media (max-width: 576px) {
   #hero h1 { font-size: 2.2rem; }
 }
+/* Light theme (default) */
+:root {
+  --bg-body: #fff;
+  --color-text: #212529;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-body: #212529;
+  --color-text: #f8f9fa;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg-body);
+  color: var(--color-text);
+}
+
+/* Adjust Bootstrap components */
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .card,
+[data-theme="dark"] .footer {
+  background-color: #2c2f33 !important;
+}
