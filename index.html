@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All‑Star Sports Hub</title>
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384‑VZ6iR2cE7VnXb6QbJZgV0K5gYQ0j+R4t9xM1cZV5K6J4G2KZc9vG7D6c9X5u2UeB"
+        crossorigin="anonymous">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512‑xxxx"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <!-- Google Font – Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+  <!-- ==== HERO ==== -->
+  <section id="hero" class="bg-dark text-white d-flex align-items-center"
+           style="background: url('assets/img/hero.jpg') center/cover no-repeat; height: 100vh;">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">All‑Star Sports Hub</h1>
+      <p class="lead mb-4">Your ultimate destination for American sports news, events, and community.</p>
+      <a href="#about" class="btn btn-primary btn-lg me-2"><i class="fas fa-info-circle me-1"></i> Learn More</a>
+      <a href="#contact" class="btn btn-outline-light btn-lg"><i class="fas fa-envelope me-1"></i> Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ==== ABOUT ==== -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Who We Are</h2>
+      <p class="lead text-center max-w-800 mx-auto">
+        Founded in 2024, All‑Star Sports Hub brings together fans of basketball, baseball,
+        soccer, football, and more. We provide up‑to‑date scores, event calendars,
+        and a vibrant community for the American sports lover.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==== GALLERY ==== -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Popular Sports</h2>
+      <div class="row g-4">
+        <!-- Basketball -->
+        <div class="col-12 col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/basketball.jpg" class="card-img-top" alt="Basketball">
+            <div class="card-body text-center">
+              <h5 class="card-title">Basketball</h5>
+              <p class="card-text">From the NBA to local courts.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Baseball -->
+        <div class="col-12 col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/baseball.jpg" class="card-img-top" alt="Baseball">
+            <div class="card-body text-center">
+              <h5 class="card-title">Baseball</h5>
+              <p class="card-text">America’s pastime, season‑by‑season.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soccer -->
+        <div class="col-12 col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/soccer.jpg" class="card-img-top" alt="Soccer">
+            <div class="card-body text-center">
+              <h5 class="card-title">Soccer</h5>
+              <p class="card-text">MLS, US‑MNT, and local leagues.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== EVENTS (Bootstrap Carousel) ==== -->
+  <section id="events" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Upcoming Events</h2>
+
+      <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="card border-0 shadow-sm">
+                  <img src="assets/img/event1.jpg" class="card-img-top" alt="Event 1">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">NBA Playoffs – West Finals</h5>
+                    <p class="card-text">June 12 – June 20, 2025 – Los Angeles, CA</p>
+                    <a href="#" class="btn btn-primary">Buy Tickets</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="card border-0 shadow-sm">
+                  <img src="assets/img/event2.jpg" class="card-img-top" alt="Event 2">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">MLB All‑Star Game</h5>
+                    <p class="card-text">July 14, 2025 – Chicago, IL</p>
+                    <a href="#" class="btn btn-primary">Get Passes</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="card border-0 shadow-sm">
+                  <img src="assets/img/event3.jpg" class="card-img-top" alt="Event 3">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">MLS Cup Final</h5>
+                    <p class="card-text">Nov 30, 2025 – Seattle, WA</p>
+                    <a href="#" class="btn btn-primary">Watch Live</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== CONTACT ==== -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="row g-3 max-w-600 mx-auto">
+        <div class="col-12">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" name="_replyto" required>
+        </div>
+
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control"
