@@ -1,0 +1,6 @@
+title: All‑Star Sports Hub
+description: US sports news & events
+baseurl: "" # bila di root
+url: "https://YOURUSERNAME.github.io"
+theme: minima
+markdown: kramdown
