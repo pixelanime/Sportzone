@@ -32,3 +32,40 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./   # folder yang berisi index.html, assets, dll.
           # Jika Anda memakai folder /docs, ubah menjadi ./docs
+
+        name: Update Live Scores
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # tiap jam tepat
+  workflow_dispatch:      # manual trigger
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0   # needed for commit
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run fetch script
+        env:
+          SPORTS_DB_KEY: ${{ secrets.SPORTS_DB_KEY }}
+        run: python scripts/fetch_scores.py
+
+      - name: Commit & push JSON
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add scripts/scores.json
+          git commit -m "Update live scores $(date -u +'%Y-%m-%d %H:%M UTC')" || echo "No changes"
+          git push origin main
