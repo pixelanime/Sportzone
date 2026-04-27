@@ -1,0 +1,76 @@
+/* -------------------------------------------------
+   Global Settings
+------------------------------------------------- */
+:root {
+  --primary: #0066cc;   /* US‑style blue */
+  --secondary: #c8102e; /* US‑style red */
+  --light: #f8f9fa;
+  --dark: #212529;
+  --font-base: 'Roboto', sans-serif;
+}
+
+/* Body & Typography */
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+/* Utility */
+.max-w-800 { max-width: 800px; }
+.max-w-600 { max-width: 600px; }
+
+/* -------------------------------------------------
+   HERO
+------------------------------------------------- */
+#hero {
+  position: relative;
+  background-attachment: fixed;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+}
+
+/* Text inside hero stays on top */
+#hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* -------------------------------------------------
+   BUTTONS
+------------------------------------------------- */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: #0052a3;
+  border-color: #004a92;
+}
+
+/* -------------------------------------------------
+   CARDS & GALLERY
+------------------------------------------------- */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card-title { font-weight: 700; }
+
+/* -------------------------------------------------
+   FOOTER
+------------------------------------------------- */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE Tweaks
+------------------------------------------------- */
+@media (max-width: 576px) {
+  #hero h1 { font-size: 2.2rem; }
+}
